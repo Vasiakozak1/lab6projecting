@@ -29,7 +29,7 @@ namespace lab6autproekt
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            partService.CreateThird();
+            partService.CreateSecond();
 
         }
     }

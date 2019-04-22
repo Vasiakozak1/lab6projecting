@@ -37,6 +37,16 @@ namespace lab6autproekt
         {
             createPart();
             var Part = swDoc;
+
+            double lengthOfMainPart = 65;
+            double widthOfMainPart = 30;
+            double heightOfMainPart = 12;
+
+            double heightOfFirst = 26;
+            double lengthOfFirst = 23;
+
+            double lengthOfExtrusion = 9;
+            double widthOfExtrsion = 11;
            
             boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, false, 0, null, 0);
             Part.SketchManager.InsertSketch(true);
@@ -48,7 +58,7 @@ namespace lab6autproekt
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstToRectEntity, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstLineDiagonalType, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
-            var vSkLines = Part.SketchManager.CreateCornerRectangle(0, 0, 0, 0.651675656571833, -0.30622217307138, 0);
+            var vSkLines = Part.SketchManager.CreateCornerRectangle(0, 0, 0, lengthOfMainPart / 100, -widthOfMainPart/100, 0);
             Part.ShowNamedView2("*Trimetric", 8);
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SelectByID2("Line5", "SKETCHSEGMENT", 0, 0, 0, false, 0, null, 0);
@@ -58,7 +68,7 @@ namespace lab6autproekt
             boolstatus = Part.Extension.SelectByID2("Line1", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
-            var myFeature = Part.FeatureManager.FeatureExtrusion2(true, false, false, 0, 0, 0.12, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, 0, 0, false);
+            var myFeature = Part.FeatureManager.FeatureExtrusion2(true, false, false, 0, 0, heightOfMainPart/100, 0.01, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, 0, 0, false);
 
             Part.SelectionManager.EnableContourSelection = false;
             boolstatus = Part.Extension.SelectByID2("", "FACE", 5.64599078923038E-02, -0.114602306094582, 0.120000000000005, false, 0, null, 0);
@@ -84,7 +94,7 @@ namespace lab6autproekt
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstToRectEntity, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstLineDiagonalType, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
-            vSkLines = Part.SketchManager.CreateCornerRectangle(0.651675656571833, 0, 0, 0.422170666192329, -0.30622217307138, 0);
+            vSkLines = Part.SketchManager.CreateCornerRectangle(lengthOfMainPart/100, 0, 0, 0.422170666192329, -widthOfMainPart/100, 0);
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SelectByID2("Line5", "SKETCHSEGMENT", 0, 0, 0, false, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line6", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
@@ -93,7 +103,7 @@ namespace lab6autproekt
             boolstatus = Part.Extension.SelectByID2("Line1", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
-            myFeature = Part.FeatureManager.FeatureExtrusion2(true, false, false, 0, 0, 0.26, 0.06, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, 0, 0, false);
+            myFeature = Part.FeatureManager.FeatureExtrusion2(true, false, false, 0, 0, heightOfFirst/100, 0.06, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, true, true, true, 0, 0, false);
 
             Part.SelectionManager.EnableContourSelection = false;
             boolstatus = Part.Extension.SelectByID2("", "FACE", 0.490292632178182, -0.093386479456683, 0.379999999999939, false, 0, null, 0);
@@ -102,7 +112,7 @@ namespace lab6autproekt
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstToRectEntity, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
             boolstatus = Part.Extension.SetUserPreferenceToggle((int)swUserPreferenceToggle_e.swSketchAddConstLineDiagonalType, (int)swUserPreferenceOption_e.swDetailingNoOptionSpecified, true);
-            vSkLines = Part.SketchManager.CreateCornerRectangle(0.651675656571833, -8.25034951156478E-02, 0, 0.56119646635272, -0.185404481061134, 0);
+            vSkLines = Part.SketchManager.CreateCornerRectangle(lengthOfMainPart/100, -8.0/100, 0, lengthOfMainPart/100 - lengthOfExtrusion/100, -8.0/100 - widthOfExtrsion/100, 0);
 
             Part.ClearSelection2(true);
             boolstatus = Part.Extension.SelectByID2("Line5", "SKETCHSEGMENT", 0, 0, 0, false, 0, null, 0);
@@ -113,9 +123,8 @@ namespace lab6autproekt
             boolstatus = Part.Extension.SelectByID2("Line4", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             boolstatus = Part.Extension.SelectByID2("Line3", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
 
-            myFeature = Part.FeatureManager.FeatureCut3(true, false, false, 1, 0, 0.26, 0.26, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false);
+            myFeature = Part.FeatureManager.FeatureCut3(true, false, false, 1, 0, heightOfFirst/100, heightOfFirst/100, false, false, false, false, 1.74532925199433E-02, 1.74532925199433E-02, false, false, false, false, false, true, true, true, true, false, 0, 0, false);
             Part.SelectionManager.EnableContourSelection = false;
-
         }
 
         public void CreateSecond()
