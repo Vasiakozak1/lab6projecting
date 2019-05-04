@@ -20,9 +20,12 @@ namespace lab6autproekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        PartDbContext dbContext;
         PartService partService;
         public MainWindow()
         {
+            dbContext = new PartDbContext();
+            //firstPartDatagrid.ItemsSource = dbContext.ParametersForFirstPart.ToArray();
             InitializeComponent();
             partService = PartService.GetInstance();
         }

@@ -30,3 +30,4 @@ C:\Users\Vasyl\Documents\Visual Studio 2015\Projects\lab6autproekt\lab6autproekt
 C:\Users\Vasyl\Documents\Visual Studio 2015\Projects\lab6autproekt\lab6autproekt\bin\Debug\ja\Npgsql.resources.dll
 C:\Users\Vasyl\Documents\Visual Studio 2015\Projects\lab6autproekt\lab6autproekt\bin\Debug\zh-CN\Npgsql.resources.dll
 C:\Users\Vasyl\Documents\Visual Studio 2015\Projects\lab6autproekt\lab6autproekt\obj\Debug\lab6autproekt.Migrations.initial.resources
+C:\Users\Vasyl\documents\visual studio 2015\Projects\lab6autproekt\lab6autproekt\obj\Debug\lab6autproekt.Migrations.second.resources
